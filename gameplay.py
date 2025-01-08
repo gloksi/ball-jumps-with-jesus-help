@@ -1,7 +1,8 @@
 import pygame as pg
+import random
 from physics.ball import Ball
 
-new_ball = Ball([500, 500], [0, 1])
+new_ball = Ball([577, 273], [random.randint(-20, 20), random.randint(-20, 20)])
 
 surface = pg.display.set_mode((1183, 586))
 surface.blit(pg.image.load("pics/bg.png"), (0, 0))
