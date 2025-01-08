@@ -14,7 +14,7 @@ new_ball.render(surface)
 
 while True:
     pg.display.flip()
-    pg.time.Clock().tick(5)
+    pg.time.Clock().tick(15)
 
     surface.blit(pg.image.load("pics/bg.png"), (0, 0))
     new_ball.update_pos()

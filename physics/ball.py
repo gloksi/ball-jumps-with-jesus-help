@@ -22,4 +22,12 @@ class Ball:
 
     def update_pos(self):
         self.coords = (self.coords[0] + self.vel[0], self.coords[1] - self.vel[1])
-        
+
+        if self.coords[0] > 1183 or self.coords[0] < 0:
+            self.vel[0] *= -1
+            self.coords = (self.coords[0] + 2 * self.vel[0], self.coords[1] - self.vel[1])
+
+        if self.coords[1] > 586 or self.coords[1] < 0:
+            self.vel[1] *= -1
+            self.coords = (self.coords[0] + self.vel[0], self.coords[1] - 2 * self.vel[1])
+            
