@@ -19,4 +19,7 @@ class Ball:
 
     def render(self, surface):
         pg.draw.circle(surface, "blue", (self.coords[0], self.coords[1]), 20)
+
+    def update_pos(self):
+        self.coords = (self.coords[0] + self.vel[0], self.coords[1] - self.vel[1])
         
